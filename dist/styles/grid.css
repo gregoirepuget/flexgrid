@@ -1,5 +1,30 @@
 .flexContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-around;
+}
+
+.flexContainer > div {
+    margin: 10px 0;
+    background: #ececec;
+}
+
+.bloc1-2 {
+    width: 460px;
+}
+
+.bloc1-3 {
+    width: 300px;
+}
+
+.bloc1-4 {
+    width: 220px;
+}
+
+.bloc1-6 {
+    width: 140px;
+}
+
+.bloc2-3 {
+    width: 620px;
 }
