@@ -1,3 +1,9 @@
+:root {
+    --desktop-width: 760px;
+    --tablet-width: 480px;
+    --bloc-margin: 20px;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -9,52 +15,52 @@
 }
 
 .flexContainer > div {
-    margin: 10px 0;
+    margin: var(--bloc-margin) 0;
     padding: 10px;
     background: #ececec;
 }
 
 .bloc1-2 {
-    width: calc(50% - 20px);
+    width: calc(50% - 2 * var(--bloc-margin));
 }
 
 .bloc1-3 {
-    width: calc(100% / 3 - 20px);
+    width: calc(100% / 3 - 2 * var(--bloc-margin));
 }
 
 .bloc1-4 {
-    width: calc(25% - 20px);
+    width: calc(25% - 2 * var(--bloc-margin));
     background: blueviolet!important;
 }
 
 .bloc1-6 {
-    width: calc(100% / 6 - 20px);
+    width: calc(100% / 6 - 2 * var(--bloc-margin));
 }
 
 .bloc2-3 {
-    width: calc(100% / 3 * 2 - 20px);
+    width: calc(100% / 3 * 2 - 2 * var(--bloc-margin));
 }
 
-/* @media screen and (max-width:960px) {
+@media screen and (max-width:var(--desktop-width)) {
     .bloc1-3 {
-        width: 460px;
+        width: calc(50% - 2 * var(--bloc-margin));
     }
 
     .bloc1-6 {
-        width: 220px;
+        width: calc(25% - 2 * var(--bloc-margin));
     }
 
     .bloc2-3 {
-        width: 460px;
+        width: calc(100% - 2 * var(--bloc-margin));
     }
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:var(--tablet-width)) {
     .flexContainer {
         width: 100%;
     }
 
     .flexContainer > div {
-        width: 100%;
+        width: calc(100% - 2 * var(--bloc-margin));
     }
-} */
+}
